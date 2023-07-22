@@ -1,0 +1,9 @@
+{{template "header.html" .}}
+
+    {{range .payload}}
+        <a href="/book{{.ID}}?auth{{$.auth}}"></a>
+            <h2>{{.Title}}</h2>
+            <p>penulis : {{.Author}}</p>
+    {{end}}
+
+{{template "footer.html" .}}

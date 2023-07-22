@@ -13,11 +13,11 @@ import (
 )
 
 func InitDB() *gorm.DB {
-	err := godotenv.Load("env.env")
+	err := godotenv.Load(".env")
 	if err != nil {
 		log.Fatal("Error load env")
 	}
-
+	
 	conn := os.Getenv("POSTGRES_URL")
 	db, err := gorm.Open("postgres", conn)
 	if err != nil {
