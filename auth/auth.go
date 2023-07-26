@@ -17,7 +17,7 @@ func HomeHandler(c *gin.Context)  {
 
 func LoginHandler(c *gin.Context)  {
 	c.HTML(http.StatusOK, "login.html", gin.H{
-		"content": "",
+		"content":"",
 	})
 }
 func LoginPostHandler(c *gin.Context)  {
